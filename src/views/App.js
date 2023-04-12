@@ -1,6 +1,6 @@
-import logo from './logo.svg';
-import './App.scss';
-import MyComponent from './example/MyComponent';
+import logo from './logo.svg'
+import './App.scss'
+import MyComponent from './example/MyComponent'
 
 function App() {
 	return (
@@ -14,7 +14,7 @@ function App() {
 				<MyComponent />
 			</header>
 		</div>
-	);
+	)
 }
 
-export default App;
+export default App
