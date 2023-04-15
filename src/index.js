@@ -4,7 +4,23 @@ import './styles/global.scss'
 import App from './views/App'
 import reportWebVitals from './reportWebVitals'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+// eslint-disable-next-line
+import { Provider } from 'react-redux'
+// eslint-disable-next-line
+import { createStore } from 'redux'
+// eslint-disable-next-line
+import rootReducers from './store/reducers/rootReducers'
+
+const reduxStore = createStore(rootReducers)
+
+ReactDOM.render(
+	<React.StrictMode>
+		<Provider store={reduxStore}>
+			<App />
+		</Provider>
+	</React.StrictMode>,
+	document.getElementById('root'),
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
